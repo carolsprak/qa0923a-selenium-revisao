@@ -1,0 +1,24 @@
+{
+  "name": "qa0723a-selenium-revisao",
+  "version": "1.0.0",
+  "description": "Selenium revisao",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/.bin/cucumber-js -f @cucumber/pretty-formatter features/* --format html:cucumber-report.html"
+  },
+  "keywords": [
+    "Selenium"
+  ],
+  "author": "Anne Rocha",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^10.3.1",
+    "@cucumber/pretty-formatter": "^1.0.0"
+  },
+  "dependencies": {
+    "assert": "^2.1.0",
+    "chromedriver": "^121.0.2",
+    "geckodriver": "^4.3.2",
+    "selenium-webdriver": "^4.18.0"
+  }
+}
