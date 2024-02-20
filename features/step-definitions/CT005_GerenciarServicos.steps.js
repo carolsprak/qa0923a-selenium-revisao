@@ -6,11 +6,11 @@ const webdriver = require('selenium-webdriver');
 var chrome = require('selenium-webdriver/chrome');
 const ChromeDriver = require('chromedriver');
 const {By, until} = require('selenium-webdriver');
-//var options   = new chrome.Options().headless();
+var options   = new chrome.Options().headless();
 let driver = new webdriver.Builder()
    .forBrowser('chrome')
    .withCapabilities(webdriver.Capabilities.chrome())
-  // .setChromeOptions(options)
+   .setChromeOptions(options)
    .build();
 
     Given('que o anunciante esteja autenticado', {timeout: 30 * 1000}, async () => { 
