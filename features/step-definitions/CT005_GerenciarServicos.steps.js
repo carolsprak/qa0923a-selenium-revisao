@@ -2,16 +2,17 @@ const {Given, Then, When, Before, After} = require('@cucumber/cucumber')
 
 const assert = require('assert')
 const webdriver = require('selenium-webdriver');
-//SETUP CHROME DRIVER SELENIUM
+//SETUP CHROME DRIVER
 var chrome = require('selenium-webdriver/chrome');
-const ChromeDriver = require('chromedriver');
-const {By, until} = require('selenium-webdriver');
+//const ChromeDriver = require('chromedriver');
+const { Builder, By, until } = require('selenium-webdriver');
+
 var options   = new chrome.Options().headless();
 let driver = new webdriver.Builder()
-   .forBrowser('chrome')
-   .withCapabilities(webdriver.Capabilities.chrome())
-   .setChromeOptions(options)
-   .build();
+    .forBrowser('chrome')
+    .withCapabilities(webdriver.Capabilities.chrome())
+    //.setChromeOptions(options)
+    .build();
 
     Given('que o anunciante esteja autenticado', {timeout: 30 * 1000}, async () => { 
         await driver.get("http://publicazo.insprak.com/sign_in")
